@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameter Suite" parallel="tests" thread-count="2">
+    <parameter name="URL" value="https://www.lambdatest.com/selenium-playground/"/>
+    <test name="Test On Chrome">
+        <parameter name="Browser" value="chrome"/>
+        <parameter name="Version" value="128.0"/>
+        <parameter name="Platform" value="Windows 10"/>
+        <classes>
+            <class name="com.tests.ScenarioTests"/>
+        </classes>
+    </test>
+        <test name="Test On Edge">
+            <parameter name="Browser" value="edge"/>
+            <parameter name="Version" value="127.0"/>
+            <parameter name="Platform" value="macOS Ventura"/>
+            <classes>
+                <class name="com.tests.ScenarioTests"/>
+            </classes>
+        </test>
+        <test name="Test On FireFox">
+            <parameter name="Browser" value="firefox"/>
+            <parameter name="Version" value="130.0"/>
+            <parameter name="Platform" value="Windows 11"/>
+            <classes>
+                <class name="com.tests.ScenarioTests"/>
+            </classes>
+        </test>
+    <test name="Test On Internet Explorer">
+        <parameter name="Browser" value="Internet Explorer"/>
+        <parameter name="Version" value="11.0"/>
+        <parameter name="Platform" value="Windows 10"/>
+        <classes>
+            <class name="com.tests.ScenarioTests"/>
+        </classes>
+    </test>
+</suite>
